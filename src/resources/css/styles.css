@@ -20,3 +20,32 @@
 .title-bg {
     -fx-background-color: #F7F5F2;
 }
+
+.title-bar-buttons {
+    -fx-border-width: 1px;
+    -fx-background-size: 30;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+}
+
+.close {
+    -fx-background-color: #ff5c5c;
+    -fx-border-color: #e33e41;
+    /*-fx-background-image: url("/img/exit.png");*/
+}
+
+.close:hover {
+    -fx-background-color: #c14645;
+    /*-fx-background-image: url("/img/minimize.png");*/
+}
+
+.minimize {
+    -fx-background-color: #00cad7;
+    -fx-border-color: #14aee6;
+}
+
+.minimize:hover {
+    -fx-background-color: #2a9ad5;
+}

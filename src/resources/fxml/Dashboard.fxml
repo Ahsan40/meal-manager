@@ -52,22 +52,18 @@
       <Pane layoutX="200.0" layoutY="55.0" prefHeight="430.0" prefWidth="622.0" />
       <HBox alignment="CENTER_RIGHT" layoutX="434.0" layoutY="-2.0" prefHeight="60.0" prefWidth="387.0" spacing="10.0">
          <children>
-            <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#minimize" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/minimize.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="DEFAULT" />
-               </cursor>
-            </ImageView>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="305.0" layoutY="24.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/exit.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="DEFAULT" />
-               </cursor>
-            </ImageView>
+            <AnchorPane layoutX="293.0" layoutY="25.0" onMouseClicked="#minimize" prefHeight="30.0" prefWidth="30.0">
+               <styleClass>
+                  <String fx:value="title-bar-buttons" />
+                  <String fx:value="minimize" />
+               </styleClass>
+            </AnchorPane>
+            <AnchorPane onMouseClicked="#exit" prefHeight="30.0" prefWidth="30.0">
+               <styleClass>
+                  <String fx:value="title-bar-buttons" />
+                  <String fx:value="close" />
+               </styleClass>
+            </AnchorPane>
          </children>
          <cursor>
             <Cursor fx:constant="HAND" />
