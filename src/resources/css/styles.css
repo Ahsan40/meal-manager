@@ -1,5 +1,8 @@
 .button {
     -fx-focus-traversable: false;
+    -fx-background-color: #dbdbdb;
+    -fx-border-color: #7a7a7a;
+    -fx-border-width: 0 0.5 0.5 0;
 }
 
 .button:hover {
@@ -12,7 +15,7 @@
 
 .side-menu {
     -fx-border-color: #7a7a7a;
-    -fx-border-width: 0 0.5 0.5 0;
+    -fx-border-width: 0.5 0 0 0.5;
 }
 
 .title-padding {
