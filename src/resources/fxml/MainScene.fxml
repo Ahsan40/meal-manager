@@ -15,7 +15,7 @@
 
 <AnchorPane prefHeight="460.0" prefWidth="822.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ahsan40.github.io.mealman.controller.MainController">
    <children>
-      <VBox id="menu-vbox" alignment="BOTTOM_CENTER" layoutY="60.0" prefHeight="430.0" prefWidth="197.0" styleClass="side-menu">
+      <VBox id="side-menu" alignment="BOTTOM_CENTER" layoutY="55.0" prefHeight="430.0" prefWidth="197.0" styleClass="side-menu">
          <children>
             <Button fx:id="btnDashboard" mnemonicParsing="false" onAction="#dashboardAction" prefHeight="71.0" prefWidth="200.0" text="Dashboard">
                <font>
@@ -49,8 +49,8 @@
             </Button>
          </children>
       </VBox>
-      <Pane fx:id="mainPane" layoutX="200.0" layoutY="55.0" prefHeight="430.0" prefWidth="622.0" />
-      <HBox alignment="CENTER_RIGHT" layoutX="434.0" layoutY="-2.0" prefHeight="60.0" prefWidth="387.0" spacing="10.0">
+      <Pane fx:id="mainPane" layoutX="198.0" layoutY="59.0" prefHeight="425.0" prefWidth="625.0" />
+      <HBox alignment="CENTER_RIGHT" layoutX="434.0" layoutY="-2.0" prefHeight="60.0" prefWidth="390.0" spacing="10.0">
          <children>
             <AnchorPane layoutX="293.0" layoutY="25.0" onMouseClicked="#minimize" prefHeight="30.0" prefWidth="30.0">
                <styleClass>
@@ -73,14 +73,14 @@
             <String fx:value="title-bg" />
          </styleClass>
       </HBox>
-      <HBox alignment="CENTER_LEFT" layoutY="-2.0" prefHeight="60.0" prefWidth="401.0" spacing="10.0">
+      <HBox alignment="CENTER_LEFT" layoutY="-2.0" prefHeight="60.0" prefWidth="436.0" spacing="10.0">
          <children>
             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/icon.png" />
                </image>
             </ImageView>
-            <Text fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="pl15" text="App Title" wrappingWidth="310.7323341369629">
+            <Text fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="pl15" text="App Title" wrappingWidth="350.87778091430664">
                <font>
                   <Font size="18.0" />
                </font>
