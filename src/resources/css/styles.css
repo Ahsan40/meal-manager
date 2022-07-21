@@ -6,7 +6,7 @@
 .button:hover {
     -fx-font-size: 18px;
     /*-fx-background-color: linear-gradient(#a4ce82, #76ac63);*/
-    -fx-background-color: #CEE5D0;
+    -fx-background-color: #BDF2D5;
 }
 
 
@@ -26,12 +26,12 @@
 
 .menu-item-active {
     /*-fx-background-color: #76BA99;*/
-    -fx-background-color: #BDF2D5;
+    -fx-background-color: #CEE5D0;
 }
 
 .menu-item-active:hover {
     -fx-font-size: 16px;
-    -fx-background-color: #BDF2D5;
+    -fx-background-color: #CEE5D0;
 }
 
 
