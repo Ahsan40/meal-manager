@@ -54,6 +54,7 @@ public class MainController implements Initializable {
     private ImageView icon;
 
     private HashMap<String, Page> tabs;
+    private HashMap<String, Button> tabButtons;
 
     private void init() throws Exception {
         // Window Config
@@ -61,41 +62,25 @@ public class MainController implements Initializable {
         icon.setImage(new Image(Objects.requireNonNull(getClass().getResource(Config.icon)).toURI().toString()));
 
         // Configure Pages
-        tabs = new HashMap<>();
-        tabs.put("dashboard", new Page("dashboard", Config.dashboard, true));
-        tabs.put("meal", new Page("meal", Config.meal, false));
-        tabs.put("bazzar", new Page("bazzar", Config.bazzar, false));
-        tabs.put("payments", new Page("payments", Config.payments, false));
-        tabs.put("people", new Page("people", Config.people, false));
-        tabs.put("extra", new Page("extra", Config.extra, false ));
-        tabs.put("default", tabs.get("dashboard"));
+        tabs = initTab();
+        tabButtons = initTabButtons();
 
         // Default Page
-        changeScene(tabs.get("default").location);
-        btnDashboard.getStyleClass().add("menu-item-active");
+        tabs.get(Config.defaultTab).activated = true;
+        tabButtons.get(Config.defaultTab).getStyleClass().add(Config.activeTabClass);
+        changeScene(tabs.get(Config.defaultTab).location);
     }
 
     @FXML
-    void dashboardAction(ActionEvent event) throws IOException {
-        Button b = ((Button)event.getSource());
-        String text = b.getText();
+    void dashboardAction(ActionEvent event) {
+        String text = ((Button)event.getSource()).getText();
         Page p = tabs.get(text.toLowerCase());
         if(!p.activated) {
-            changeScene(p.location, p.name);
-            removeStyle("menu-item-active");
-            b.getStyleClass().add("menu-item-active");
+            changeScene(p.location, p.name, Config.activeTabClass);
         }
     }
 
     // Internal Private Function
-    private void removeStyle(String name){
-        btnDashboard.getStyleClass().remove(name);
-        btnMeal.getStyleClass().remove(name);
-        btnBazzar.getStyleClass().remove(name);
-        btnPayments.getStyleClass().remove(name);
-        btnPeople.getStyleClass().remove(name);
-        btnExtra.getStyleClass().remove(name);
-    }
     private void changeScene(String scene) {
         try {
             // Load FXML
@@ -106,14 +91,48 @@ public class MainController implements Initializable {
         }
     }
 
-    private void changeScene(String scene, String name) {
+    private void changeScene(String scene, String name, String activeClass) {
         changeScene(scene);
         // Mark
-        for(Map.Entry<String, Page> p: tabs.entrySet()) {
-            p.getValue().activated = false;
+        for(Map.Entry<String, Page> p: this.tabs.entrySet()) {
+            // Changing Current Active Tab State
+            if(p.getValue().activated) {
+                // Changing Tab Active State
+                p.getValue().activated = false;
+                // Removing Tab Active Class
+                this.tabButtons.get(p.getValue().name).getStyleClass().remove(activeClass);
+                System.out.println("- Remove -> " + p.getValue().name + " -> " + activeClass);
+                break;
+            }
         }
-        tabs.get(name).activated = true;
+        // Making Clicked Tab Active
+        this.tabs.get(name).activated = true;
+        this.tabButtons.get(name).getStyleClass().add(activeClass);
+        System.out.println("- Add -> " + name + " -> " + activeClass);
     }
+
+    private HashMap<String, Page> initTab() {
+        HashMap<String, Page> t = new HashMap<>();
+        t.put("dashboard", new Page("dashboard", Config.dashboard, false));
+        t.put("meal", new Page("meal", Config.meal, false));
+        t.put("bazzar", new Page("bazzar", Config.bazzar, false));
+        t.put("payments", new Page("payments", Config.payments, false));
+        t.put("people", new Page("people", Config.people, false));
+        t.put("extra", new Page("extra", Config.extra, false ));
+        return t;
+    }
+
+    private HashMap<String, Button> initTabButtons() {
+        HashMap<String, Button> tb = new HashMap<>();
+        tb.put("dashboard", btnDashboard);
+        tb.put("meal", btnMeal);
+        tb.put("bazzar", btnBazzar);
+        tb.put("payments", btnPayments);
+        tb.put("people", btnPeople);
+        tb.put("extra", btnExtra);
+        return tb;
+    }
+
     @FXML
     private void exit(MouseEvent event) {
         System.exit(0);

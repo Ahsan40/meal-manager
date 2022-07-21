@@ -8,6 +8,8 @@ public class Config {
     public static String css = "/resources/css/styles.css";
     public static double h = 485;
     public static double w = 820;
+    public static String defaultTab = "dashboard";
+    public static String activeTabClass = "menu-item-active";
 
     // Scenes
     public static String mainScene = "/resources/fxml/MainScene.fxml";
