@@ -13,6 +13,10 @@
     -fx-background-color: lightgreen;
 }
 
+.button-active:hover {
+    -fx-background-color: lightgreen;
+}
+
 .side-menu {
     -fx-border-color: #7a7a7a;
     -fx-border-width: 0.5 0 0 0.5;
