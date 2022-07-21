@@ -12,12 +12,10 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
@@ -133,13 +131,15 @@ public class MainController implements Initializable {
         return tb;
     }
 
+
+    // Constant Handlers/Methods
     @FXML
-    private void exit(MouseEvent event) {
+    private void exit() {
         System.exit(0);
     }
 
     @FXML
-    private void minimize(MouseEvent event) {
+    private void minimize() {
         Main.sm.minimize();
     }
 
