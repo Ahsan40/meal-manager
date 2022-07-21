@@ -10,11 +10,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
@@ -47,12 +50,15 @@ public class MainController implements Initializable {
     @FXML
     private Text title;
 
-//    private Page[] tabs;
+    @FXML
+    private ImageView icon;
+
     private HashMap<String, Page> tabs;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    private void init() throws Exception {
+        // Window Config
         title.setText(Config.title + " " + Config.version);
+        icon.setImage(new Image(Objects.requireNonNull(getClass().getResource(Config.icon)).toURI().toString()));
 
         // Configure Pages
         tabs = new HashMap<>();
@@ -116,5 +122,14 @@ public class MainController implements Initializable {
     @FXML
     private void minimize(MouseEvent event) {
         Main.sm.minimize();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            init();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

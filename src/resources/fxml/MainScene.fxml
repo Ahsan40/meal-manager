@@ -75,7 +75,7 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" layoutY="-2.0" prefHeight="60.0" prefWidth="436.0" spacing="10.0">
          <children>
-            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="icon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/icon.png" />
                </image>
