@@ -66,7 +66,7 @@ public class MainController implements Initializable {
     }
 
     @FXML
-    void dashboardAction(ActionEvent event) {
+    void tabItemAction(ActionEvent event) {
         String text = ((Button) event.getSource()).getText();
         Page p = tabs.get(text.toLowerCase());
         if (!p.activated) {
