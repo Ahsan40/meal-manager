@@ -15,7 +15,7 @@
 
 <AnchorPane prefHeight="460.0" prefWidth="822.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ahsan40.github.io.mealman.controller.MainController">
    <children>
-      <VBox id="menu-vbox" alignment="BOTTOM_CENTER" layoutY="55.0" prefHeight="429.0" prefWidth="197.0" styleClass="side-menu">
+      <VBox id="menu-vbox" alignment="BOTTOM_CENTER" layoutY="60.0" prefHeight="430.0" prefWidth="197.0" styleClass="side-menu">
          <children>
             <Button fx:id="btnDashboard" mnemonicParsing="false" onAction="#dashboardAction" prefHeight="71.0" prefWidth="200.0" text="Dashboard">
                <font>
