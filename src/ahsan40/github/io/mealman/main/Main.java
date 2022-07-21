@@ -20,7 +20,7 @@ public class Main extends Application {
         sm.setIcon(Config.icon);
 
         // Scene Transition
-        sm.open("dashboard", Config.dashboard);
+        sm.open("main", Config.mainScene);
     }
 
     public static void main(String[] args) {

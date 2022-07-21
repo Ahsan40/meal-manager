@@ -10,5 +10,11 @@ public class Config {
     public static double w = 820;
 
     // Scenes
+    public static String mainScene = "/resources/fxml/MainScene.fxml";
     public static String dashboard = "/resources/fxml/Dashboard.fxml";
+    public static String meal = "/resources/fxml/Meal.fxml";
+    public static String bazzar = "/resources/fxml/Bazzar.fxml";
+    public static String payments = "/resources/fxml/Payments.fxml";
+    public static String people = "/resources/fxml/People.fxml";
+    public static String extra = "/resources/fxml/Extra.fxml";
 }
