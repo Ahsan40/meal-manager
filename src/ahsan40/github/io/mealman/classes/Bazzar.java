@@ -4,10 +4,10 @@ package ahsan40.github.io.mealman.classes;
 import java.time.LocalDateTime;
 
 public class Bazzar {
+    private final LocalDateTime date;
     private String name;
     private String type;
     private double price;
-    private final LocalDateTime date;
 
     public Bazzar(String name, String type, double price) {
         this.name = name;

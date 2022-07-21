@@ -8,6 +8,10 @@ import javafx.stage.Stage;
 public class Main extends Application {
     public static SceneManager sm;
 
+    public static void main(String[] args) {
+        Application.launch(args);
+    }
+
     @Override
     public void start(Stage stage) throws Exception {
         // Scene Manager
@@ -21,9 +25,5 @@ public class Main extends Application {
 
         // Scene Transition
         sm.open("main", Config.mainScene);
-    }
-
-    public static void main(String[] args) {
-        Application.launch(args);
     }
 }

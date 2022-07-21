@@ -3,9 +3,9 @@ package ahsan40.github.io.mealman.classes;
 import java.time.LocalDateTime;
 
 public class Extra {
+    private final LocalDateTime date;
     private String name;
     private double price;
-    private final LocalDateTime date;
 
     public Extra(String name, double price) {
         this.name = name;

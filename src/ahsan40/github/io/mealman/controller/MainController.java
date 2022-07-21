@@ -71,9 +71,9 @@ public class MainController implements Initializable {
 
     @FXML
     void dashboardAction(ActionEvent event) {
-        String text = ((Button)event.getSource()).getText();
+        String text = ((Button) event.getSource()).getText();
         Page p = tabs.get(text.toLowerCase());
-        if(!p.activated) {
+        if (!p.activated) {
             changeScene(p.location, p.name, Config.activeTabClass);
         }
     }
@@ -92,9 +92,9 @@ public class MainController implements Initializable {
     private void changeScene(String scene, String name, String activeClass) {
         changeScene(scene);
         // Mark
-        for(Map.Entry<String, Page> p: this.tabs.entrySet()) {
+        for (Map.Entry<String, Page> p : this.tabs.entrySet()) {
             // Changing Current Active Tab State
-            if(p.getValue().activated) {
+            if (p.getValue().activated) {
                 // Changing Tab Active State
                 p.getValue().activated = false;
                 // Removing Tab Active Class
@@ -116,7 +116,7 @@ public class MainController implements Initializable {
         t.put("bazzar", new Page("bazzar", Config.bazzar, false));
         t.put("payments", new Page("payments", Config.payments, false));
         t.put("people", new Page("people", Config.people, false));
-        t.put("extra", new Page("extra", Config.extra, false ));
+        t.put("extra", new Page("extra", Config.extra, false));
         return t;
     }
 
