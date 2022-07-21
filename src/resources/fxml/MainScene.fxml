@@ -15,34 +15,34 @@
 
 <AnchorPane prefHeight="460.0" prefWidth="822.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ahsan40.github.io.mealman.controller.MainController">
    <children>
-      <VBox id="side-menu" alignment="BOTTOM_CENTER" layoutY="55.0" prefHeight="430.0" prefWidth="197.0" styleClass="side-menu">
+      <VBox id="side-menu" alignment="BOTTOM_CENTER" layoutY="58.0" prefHeight="429.0" prefWidth="197.0" styleClass="side-menu">
          <children>
-            <Button fx:id="btnDashboard" mnemonicParsing="false" onAction="#dashboardAction" prefHeight="71.0" prefWidth="200.0" text="Dashboard">
+            <Button fx:id="btnDashboard" mnemonicParsing="false" onAction="#dashboardAction" prefHeight="71.0" prefWidth="200.0" styleClass="menu-item" text="Dashboard">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btnMeal" mnemonicParsing="false" onAction="#dashboardAction" prefHeight="71.0" prefWidth="200.0" text="Meal">
+            <Button fx:id="btnMeal" mnemonicParsing="false" onAction="#dashboardAction" prefHeight="71.0" prefWidth="200.0" styleClass="menu-item" text="Meal">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btnBazzar" mnemonicParsing="false" onAction="#dashboardAction" prefHeight="71.0" prefWidth="200.0" text="Bazzar">
+            <Button fx:id="btnBazzar" mnemonicParsing="false" onAction="#dashboardAction" prefHeight="71.0" prefWidth="200.0" styleClass="menu-item" text="Bazzar">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btnPayments" layoutX="10.0" layoutY="295.0" mnemonicParsing="false" onAction="#dashboardAction" prefHeight="71.0" prefWidth="200.0" text="Payments">
+            <Button fx:id="btnPayments" layoutX="10.0" layoutY="295.0" mnemonicParsing="false" onAction="#dashboardAction" prefHeight="71.0" prefWidth="200.0" styleClass="menu-item" text="Payments">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btnPeople" mnemonicParsing="false" onAction="#dashboardAction" prefHeight="71.0" prefWidth="200.0" text="People">
+            <Button fx:id="btnPeople" mnemonicParsing="false" onAction="#dashboardAction" prefHeight="71.0" prefWidth="200.0" styleClass="menu-item" text="People">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btnExtra" mnemonicParsing="false" onAction="#dashboardAction" prefHeight="71.0" prefWidth="200.0" text="Extra">
+            <Button fx:id="btnExtra" mnemonicParsing="false" onAction="#dashboardAction" prefHeight="71.0" prefWidth="196.0" styleClass="menu-item" text="Extra">
                <font>
                   <Font size="14.0" />
                </font>

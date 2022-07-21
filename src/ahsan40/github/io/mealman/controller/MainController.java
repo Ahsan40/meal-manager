@@ -66,7 +66,7 @@ public class MainController implements Initializable {
 
         // Default Page
         changeScene(tabs.get("default").location);
-        btnDashboard.getStyleClass().add("button-active");
+        btnDashboard.getStyleClass().add("menu-item-active");
     }
 
     @FXML
@@ -76,8 +76,8 @@ public class MainController implements Initializable {
         Page p = tabs.get(text.toLowerCase());
         if(!p.activated) {
             changeScene(p.location, p.name);
-            removeStyle("button-active");
-            b.getStyleClass().add("button-active");
+            removeStyle("menu-item-active");
+            b.getStyleClass().add("menu-item-active");
         }
     }
 
