@@ -1,6 +1,5 @@
 package ahsan40.github.io.mealman.controller;
 
-
 import ahsan40.github.io.mealman.classes.Page;
 import ahsan40.github.io.mealman.main.Config;
 import ahsan40.github.io.mealman.main.Main;
@@ -18,7 +17,6 @@ import javafx.scene.text.Text;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -63,9 +61,7 @@ public class MainController implements Initializable {
         tabs = initTab();
         tabButtons = initTabButtons();
 
-        // Default Page
-        tabs.get(Config.defaultTab).activated = true;
-        tabButtons.get(Config.defaultTab).getStyleClass().add(Config.activeTabClass);
+        // Set Active
         changeScene(tabs.get(Config.defaultTab).location);
     }
 
@@ -91,22 +87,18 @@ public class MainController implements Initializable {
 
     private void changeScene(String scene, String name, String activeClass) {
         changeScene(scene);
-        // Mark
-        for (Map.Entry<String, Page> p : this.tabs.entrySet()) {
-            // Changing Current Active Tab State
-            if (p.getValue().activated) {
-                // Changing Tab Active State
-                p.getValue().activated = false;
-                // Removing Tab Active Class
-                this.tabButtons.get(p.getValue().name).getStyleClass().remove(activeClass);
-                System.out.println("- Remove -> " + p.getValue().name + " -> " + activeClass);
-                break;
-            }
-        }
-        // Making Clicked Tab Active
-        this.tabs.get(name).activated = true;
-        this.tabButtons.get(name).getStyleClass().add(activeClass);
-        System.out.println("- Add -> " + name + " -> " + activeClass);
+
+        // Changing(Disabling) Active State of Current Active Tab
+        this.tabs.get("active").activated = false;
+        this.tabButtons.get("active").getStyleClass().remove(activeClass);
+
+        // Assigning New Active Tab
+        this.tabs.put("active", this.tabs.get(name));
+        this.tabButtons.put("active", this.tabButtons.get(name));
+
+        // Changing(Enabling) Active State of New Active Tab
+        this.tabs.get("active").activated = true;
+        this.tabButtons.get("active").getStyleClass().add(activeClass);
     }
 
     private HashMap<String, Page> initTab() {
@@ -117,6 +109,10 @@ public class MainController implements Initializable {
         t.put("payments", new Page("payments", Config.payments, false));
         t.put("people", new Page("people", Config.people, false));
         t.put("extra", new Page("extra", Config.extra, false));
+
+        // Default Tab Config
+        t.put("active", t.get(Config.defaultTab));
+        t.get(Config.defaultTab).activated = true;
         return t;
     }
 
@@ -128,6 +124,10 @@ public class MainController implements Initializable {
         tb.put("payments", btnPayments);
         tb.put("people", btnPeople);
         tb.put("extra", btnExtra);
+
+        // Default Tab Button Config
+        tb.put("active", tb.get(Config.defaultTab));
+        tb.get(Config.defaultTab).getStyleClass().add(Config.activeTabClass);
         return tb;
     }
 
