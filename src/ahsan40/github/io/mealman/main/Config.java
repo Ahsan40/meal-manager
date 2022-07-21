@@ -6,7 +6,7 @@ public class Config {
     public static String version = "v1.0";
     public static String icon = "/resources/img/icon3.png";
     public static String css = "/resources/css/styles.css";
-    public static double h = 460;
+    public static double h = 487;
     public static double w = 822;
     public static String defaultTab = "dashboard";
     public static String activeTabClass = "menu-item-active";
