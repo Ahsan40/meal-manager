@@ -7,7 +7,7 @@
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="425.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/18"
             fx:controller="ahsan40.github.io.mealman.controller.DashboardController">
     <children>
-        <Text layoutX="224.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bazzar">
+        <Text layoutX="224.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bazaar">
             <font>
                 <Font size="48.0"/>
             </font>

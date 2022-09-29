@@ -23,7 +23,7 @@ import java.util.ResourceBundle;
 public class MainController implements Initializable {
 
     @FXML
-    private Button btnBazzar;
+    private Button btnBazaar;
 
     @FXML
     private Button btnDashboard;
@@ -105,7 +105,7 @@ public class MainController implements Initializable {
         HashMap<String, Page> t = new HashMap<>();
         t.put("dashboard", new Page("dashboard", Config.dashboard, false));
         t.put("meal", new Page("meal", Config.meal, false));
-        t.put("bazzar", new Page("bazzar", Config.bazzar, false));
+        t.put("bazaar", new Page("bazaar", Config.bazaar, false));
         t.put("payments", new Page("payments", Config.payments, false));
         t.put("people", new Page("people", Config.people, false));
         t.put("extra", new Page("extra", Config.extra, false));
@@ -120,7 +120,7 @@ public class MainController implements Initializable {
         HashMap<String, Button> tb = new HashMap<>();
         tb.put("dashboard", btnDashboard);
         tb.put("meal", btnMeal);
-        tb.put("bazzar", btnBazzar);
+        tb.put("bazaar", btnBazaar);
         tb.put("payments", btnPayments);
         tb.put("people", btnPeople);
         tb.put("extra", btnExtra);

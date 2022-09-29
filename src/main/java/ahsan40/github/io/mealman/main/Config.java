@@ -15,7 +15,7 @@ public class Config {
     public static String mainScene = "/fxml/MainScene.fxml";
     public static String dashboard = "/fxml/Dashboard.fxml";
     public static String meal = "/fxml/Meal.fxml";
-    public static String bazzar = "/fxml/Bazzar.fxml";
+    public static String bazaar = "/fxml/Bazaar.fxml";
     public static String payments = "/fxml/Payments.fxml";
     public static String people = "/fxml/People.fxml";
     public static String extra = "/fxml/Extra.fxml";

@@ -26,8 +26,8 @@
                         <Font size="14.0"/>
                     </font>
                 </Button>
-                <Button fx:id="btnBazzar" mnemonicParsing="false" onAction="#tabItemAction" prefHeight="71.0"
-                        prefWidth="200.0" styleClass="menu-item" text="Bazzar">
+                <Button fx:id="btnBazaar" mnemonicParsing="false" onAction="#tabItemAction" prefHeight="71.0"
+                        prefWidth="200.0" styleClass="menu-item" text="Bazaar">
                     <font>
                         <Font size="14.0"/>
                     </font>
