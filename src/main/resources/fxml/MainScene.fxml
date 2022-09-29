@@ -9,7 +9,7 @@
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="487.0" prefWidth="822.0" stylesheets="@../css/styles.css"
-            xmlns="http://javafx.com/javafx/18" fx:controller="ahsan40.github.io.mealman.controller.MainController">
+            xmlns="http://javafx.com/javafx/18" fx:controller="dev.pages.ahsan.mealman.controller.MainController">
     <children>
         <VBox id="side-menu" alignment="BOTTOM_CENTER" layoutY="58.0" prefHeight="429.0" prefWidth="197.0"
               styleClass="side-menu">

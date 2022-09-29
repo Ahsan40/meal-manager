@@ -1,4 +1,4 @@
-package ahsan40.github.io.mealman.main;
+package dev.pages.ahsan.mealman.main;
 
 public class Config {
     // App Configs

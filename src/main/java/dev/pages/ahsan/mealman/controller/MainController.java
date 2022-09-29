@@ -1,8 +1,8 @@
-package ahsan40.github.io.mealman.controller;
+package dev.pages.ahsan.mealman.controller;
 
-import ahsan40.github.io.mealman.classes.Page;
-import ahsan40.github.io.mealman.main.Config;
-import ahsan40.github.io.mealman.main.Main;
+import dev.pages.ahsan.mealman.classes.Page;
+import dev.pages.ahsan.mealman.main.Config;
+import dev.pages.ahsan.mealman.main.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

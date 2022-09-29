@@ -1,14 +1,17 @@
-package ahsan40.github.io.mealman.classes;
+package dev.pages.ahsan.mealman.classes;
+
 
 import java.time.LocalDateTime;
 
-public class Extra {
+public class Bazzar {
     private final LocalDateTime date;
     private String name;
+    private String type;
     private double price;
 
-    public Extra(String name, double price) {
+    public Bazzar(String name, String type, double price) {
         this.name = name;
+        this.type = type;
         this.price = price;
         this.date = LocalDateTime.now();
     }
@@ -23,6 +26,14 @@ public class Extra {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public double getPrice() {

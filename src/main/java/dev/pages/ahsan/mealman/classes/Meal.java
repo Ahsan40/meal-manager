@@ -1,4 +1,4 @@
-package ahsan40.github.io.mealman.classes;
+package dev.pages.ahsan.mealman.classes;
 
 import java.time.LocalDateTime;
 
