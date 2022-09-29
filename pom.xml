@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>ahsan40.github.io.mealman/ahsan40.github.io.mealman.HelloApplication</mainClass>
+                            <mainClass>dev.pages.ahsan.mealman/dev.pages.ahsan.mealman.main.Main</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
