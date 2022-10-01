@@ -25,4 +25,4 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: jar
-        path: meal-manager\mealman-1.0-SNAPSHOT-shaded.jar
+        path: meal-manager/target/mealman-1.0-SNAPSHOT.jar
