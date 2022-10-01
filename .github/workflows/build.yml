@@ -8,9 +8,14 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-
-    runs-on: windows-latest
+  configurator:
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      matrix:
+        config:
+        - {os: "ubuntu-latest", name: "windows"}
+        - {os: "windows-latest", name: "linux"}
+        - {os: "mac-latest", name: "mac"}
 
     steps:
     - uses: actions/checkout@v3
@@ -24,5 +29,6 @@ jobs:
       run: mvn package
     - uses: actions/upload-artifact@v3
       with:
-        name: jar
+        name: ${{ matrix.config.name }}-jar
         path: target/*-shaded.jar
+        
