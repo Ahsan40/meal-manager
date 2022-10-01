@@ -49,17 +49,23 @@ public class MainController implements Initializable {
     @FXML
     private ImageView icon;
 
+    //////////////////
+    // Private Data //
+    //////////////////
     private HashMap<String, Page> tabs;
     private HashMap<String, Button> tabButtons;
     private Button[] buttons;
 
+    /////////////////
+    // Initializer //
+    /////////////////
     private void init() throws Exception {
         // Window Config
         title.setText(Config.title + " " + Config.version);
         icon.setImage(new Image(Objects.requireNonNull(getClass().getResource(Config.icon)).toURI().toString()));
 
         // Configure Pages
-        // Serials and size in this array is important. Make sure to match it with "ArrayList<Page> tabs" from Config class.
+        /* Serials and size in this array is important. Make sure to match it with "ArrayList<Page> tabs" from Config class. */
         buttons = new Button[]{btnDashboard, btnMeal, btnBazaar, btnPayments, btnPeople, btnExtra};
         tabs = initTab();
         tabButtons = initTabButtons();
@@ -68,8 +74,11 @@ public class MainController implements Initializable {
         changeScene(tabs.get(Config.defaultTab).location);
     }
 
+    ////////////
+    // Action //
+    ////////////
     @FXML
-    void tabItemAction(ActionEvent event) {
+    private void tabItemAction(ActionEvent event) {
         String text = ((Button) event.getSource()).getText();
         Page p = tabs.get(text.toLowerCase());
         if (!p.activated) {
@@ -77,7 +86,9 @@ public class MainController implements Initializable {
         }
     }
 
-    // Internal Private Function
+    ///////////////////////////////
+    // Internal Private Function //
+    ///////////////////////////////
     private void changeScene(String scene) {
         try {
             // Load FXML
@@ -129,8 +140,9 @@ public class MainController implements Initializable {
         return tb;
     }
 
-
-    // Constant Handlers/Methods
+    ///////////////////////////////
+    // Constant Handlers/Methods //
+    ///////////////////////////////
     @FXML
     private void exit() {
         System.exit(0);
