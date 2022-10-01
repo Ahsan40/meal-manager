@@ -15,7 +15,7 @@ jobs:
         config:
         - {os: "ubuntu-latest", name: "windows"}
         - {os: "windows-latest", name: "linux"}
-        - {os: "mac-latest", name: "mac"}
+        - {os: "macos-latest", name: "mac"}
 
     steps:
     - uses: actions/checkout@v3
