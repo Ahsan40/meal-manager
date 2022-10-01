@@ -23,7 +23,7 @@ public class Config {
 
     static {
         // Corresponding button needs to be added in MainController class and MainScene fxml.
-        tabs.add(new Page("dashboard", "/fxml/Dashboard.fxml", false));
+        tabs.add(new Page("dashboard", "/fxml/Dashboard.fxml"));
         tabs.add(new Page("meal", "/fxml/Meal.fxml"));
         tabs.add(new Page("bazaar", "/fxml/Bazaar.fxml"));
         tabs.add(new Page("payments", "/fxml/Payments.fxml"));
