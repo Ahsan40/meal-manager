@@ -21,9 +21,8 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      working-directory: target
       run: mvn install
     - uses: actions/upload-artifact@v3
       with:
         name: jar
-        path: target\mealman-1.0-SNAPSHOT-shaded.jar
+        path: meal-manager\mealman-1.0-SNAPSHOT-shaded.jar
