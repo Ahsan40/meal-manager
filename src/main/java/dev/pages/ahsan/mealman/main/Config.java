@@ -1,5 +1,9 @@
 package dev.pages.ahsan.mealman.main;
 
+import dev.pages.ahsan.mealman.classes.Page;
+
+import java.util.ArrayList;
+
 public class Config {
     // App Configs
     public static String title = "Meal Manager";
@@ -8,15 +12,22 @@ public class Config {
     public static String css = "/css/styles.css";
     public static double h = 487;
     public static double w = 822;
+
+    // Scene Settings
+    public static String mainScene = "/fxml/MainScene.fxml";
+
+    // Tab Settings
     public static String defaultTab = "dashboard";
     public static String activeTabClass = "menu-item-active";
+    public static ArrayList<Page> tabs = new ArrayList<>();
 
-    // Scenes
-    public static String mainScene = "/fxml/MainScene.fxml";
-    public static String dashboard = "/fxml/Dashboard.fxml";
-    public static String meal = "/fxml/Meal.fxml";
-    public static String bazaar = "/fxml/Bazaar.fxml";
-    public static String payments = "/fxml/Payments.fxml";
-    public static String people = "/fxml/People.fxml";
-    public static String extra = "/fxml/Extra.fxml";
+    static {
+        // Corresponding button needs to be added in MainController class and MainScene fxml.
+        tabs.add(new Page("dashboard", "/fxml/Dashboard.fxml", false));
+        tabs.add(new Page("meal", "/fxml/Meal.fxml"));
+        tabs.add(new Page("bazaar", "/fxml/Bazaar.fxml"));
+        tabs.add(new Page("payments", "/fxml/Payments.fxml"));
+        tabs.add(new Page("people", "/fxml/People.fxml"));
+        tabs.add(new Page("extra", "/fxml/Extra.fxml"));
+    }
 }

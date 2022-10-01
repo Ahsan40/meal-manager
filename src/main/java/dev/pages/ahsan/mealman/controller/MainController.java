@@ -51,6 +51,7 @@ public class MainController implements Initializable {
 
     private HashMap<String, Page> tabs;
     private HashMap<String, Button> tabButtons;
+    private Button[] buttons;
 
     private void init() throws Exception {
         // Window Config
@@ -58,6 +59,8 @@ public class MainController implements Initializable {
         icon.setImage(new Image(Objects.requireNonNull(getClass().getResource(Config.icon)).toURI().toString()));
 
         // Configure Pages
+        // Serials and size in this array is important. Make sure to match it with "ArrayList<Page> tabs" from Config class.
+        buttons = new Button[]{btnDashboard, btnMeal, btnBazaar, btnPayments, btnPeople, btnExtra};
         tabs = initTab();
         tabButtons = initTabButtons();
 
@@ -103,12 +106,9 @@ public class MainController implements Initializable {
 
     private HashMap<String, Page> initTab() {
         HashMap<String, Page> t = new HashMap<>();
-        t.put("dashboard", new Page("dashboard", Config.dashboard, false));
-        t.put("meal", new Page("meal", Config.meal, false));
-        t.put("bazaar", new Page("bazaar", Config.bazaar, false));
-        t.put("payments", new Page("payments", Config.payments, false));
-        t.put("people", new Page("people", Config.people, false));
-        t.put("extra", new Page("extra", Config.extra, false));
+        for (Page p : Config.tabs) {
+            t.put(p.name, p);
+        }
 
         // Default Tab Config
         t.put("active", t.get(Config.defaultTab));
@@ -118,12 +118,10 @@ public class MainController implements Initializable {
 
     private HashMap<String, Button> initTabButtons() {
         HashMap<String, Button> tb = new HashMap<>();
-        tb.put("dashboard", btnDashboard);
-        tb.put("meal", btnMeal);
-        tb.put("bazaar", btnBazaar);
-        tb.put("payments", btnPayments);
-        tb.put("people", btnPeople);
-        tb.put("extra", btnExtra);
+        int i = 0;
+        for (Page p : Config.tabs) {
+            tb.put(p.name, buttons[i++]);
+        }
 
         // Default Tab Button Config
         tb.put("active", tb.get(Config.defaultTab));
