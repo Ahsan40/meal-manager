@@ -11,7 +11,6 @@ public class Page {
         this.activated = false;
     }
 
-
     public Page(String name, String location, boolean activated) {
         this(name, location);
         this.activated = activated;
